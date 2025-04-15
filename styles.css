@@ -298,25 +298,96 @@ h2 a:hover, h3 a:hover {
     z-index: 2;
 }
 
+/* Custom Arrow Styling for Carousel */
 .carousel button {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: transparent; /* Remove the background */
+    color: #1a9733; /* Green color similar to your image */
     border: none;
-    border-radius: 50%;
     width: 40px;
     height: 40px;
-    font-size: 1.5rem;
+    font-size: 0; /* Hide the text arrow */
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    position: relative;
     z-index: 5;
 }
 
-.carousel button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-2px);
+/* Create the arrow shape using pseudo-elements */
+.carousel button::before,
+.carousel button::after {
+    content: '';
+    position: absolute;
+    background-color: #1a9733; /* Green color */
+    transition: all 0.3s ease;
+}
+
+/* Previous button (left arrow) */
+.carousel button:first-of-type::before {
+    width: 30px;
+    height: 6px;
+    transform: rotate(45deg) translateY(-10px);
+}
+
+.carousel button:first-of-type::after {
+    width: 30px;
+    height: 6px;
+    transform: rotate(-45deg) translateY(10px);
+}
+
+/* Next button (right arrow) */
+.carousel button:last-of-type::before {
+    width: 30px;
+    height: 6px;
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+.carousel button:last-of-type::after {
+    width: 30px;
+    height: 6px;
+    transform: rotate(45deg) translateY(10px);
+}
+
+/* Hover effects */
+.carousel button:hover::before,
+.carousel button:hover::after {
+    background-color: #0d6b21; /* Darker green on hover */
+}
+
+/* Active/click animation */
+.carousel button:active::before,
+.carousel button:active::after {
+    background-color: #27c347; /* Brighter green when clicked */
+    transform-origin: center;
+}
+
+.carousel button:first-of-type:active::before {
+    transform: rotate(45deg) translateY(-10px) scale(0.9);
+}
+
+.carousel button:first-of-type:active::after {
+    transform: rotate(-45deg) translateY(10px) scale(0.9);
+}
+
+.carousel button:last-of-type:active::before {
+    transform: rotate(-45deg) translateY(-10px) scale(0.9);
+}
+
+.carousel button:last-of-type:active::after {
+    transform: rotate(45deg) translateY(10px) scale(0.9);
+}
+
+/* Make sure the buttons are properly positioned */
+
+/* Adjust the button position */
+.carousel button:first-of-type {
+    left: 10px;
+}
+
+.carousel button:last-of-type {
+    right: 10px;
 }
 
 .carousel-indicators {
