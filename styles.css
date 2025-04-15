@@ -231,7 +231,7 @@ h1, h2, h3 {
 
 h2 {
     max-width: 100% !important;  /* Remove the 95% restriction */
-    padding: 0 20px;       /* Add matching side padding */
+   /* Add matching side padding */
     white-space: nowrap; 
 }
 
@@ -588,10 +588,6 @@ footer a:hover {
         font-size: 1.4rem;
         line-height: 1.3;
     }
-
-    h2 {
-        white-space: normal !important;
-    }
 }
 
 @media (max-width: 480px) {
@@ -620,9 +616,5 @@ footer a:hover {
     h1, h2, h3 {
         font-size: 1.3rem;
         letter-spacing: 0.5px;
-    }
-    
-    h2 {
-        white-space: normal !important;
     }
 }
