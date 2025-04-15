@@ -590,7 +590,7 @@ footer a:hover {
     }
 
     h2 {
-        white-space: normal;
+        white-space: normal !important;
     }
 }
 
@@ -623,6 +623,6 @@ footer a:hover {
     }
     
     h2 {
-        white-space: normal;
+        white-space: normal !important;
     }
 }
