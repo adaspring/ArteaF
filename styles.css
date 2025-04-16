@@ -566,23 +566,67 @@ footer a:hover {
     transform: translateY(-50%);
 }
 
+/* Lightbox Arrows - Match Carousel Style */
 .lightbox-prev,
 .lightbox-next {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background: transparent !important;
+    border: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 20px !important;
+    box-shadow: none !important;
 }
 
-.lightbox-prev:hover,
-.lightbox-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: scale(1.1);
+/* Create chevron using border technique */
+.lightbox-prev::before,
+.lightbox-next::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-width: 6px 0 0 6px;
+    border-color: #1a9733;
+    top: 50%;
+    left: 50%;
+    transition: border-color 0.3s ease;
+}
+
+/* Left arrow */
+.lightbox-prev::before {
+    transform: translate(-40%, -50%) rotate(-45deg);
+}
+
+/* Right arrow */
+.lightbox-next::before {
+    transform: translate(-60%, -50%) rotate(135deg);
+}
+
+/* Hover states */
+.lightbox-prev:hover::before,
+.lightbox-next:hover::before {
+    border-color: #27c347;
+}
+
+/* Active states */
+.lightbox-prev:active::before,
+.lightbox-next:active::before {
+    border-color: #0d6b21;
+    transform: 
+        translate(var(--tx, -40%), -50%) 
+        rotate(var(--rot, -45deg)) 
+        scale(0.9);
+}
+
+.lightbox-next:active::before {
+    --tx: -60%;
+    --rot: 135deg;
+}
+
+/* Remove original arrow text */
+.lightbox-prev span,
+.lightbox-next span {
+    display: none !important;
 }
 
 .lightbox-caption {
