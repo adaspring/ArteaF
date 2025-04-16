@@ -328,12 +328,12 @@ h2 a:hover, h3 a:hover {
 
 /* Left arrow - rotate to point left */
 .carousel button:first-of-type::before {
-    transform: translate(-40%, -50%) rotate(-45deg);
+    transform: translate(-30%, -50%) rotate(-45deg);
 }
 
 /* Right arrow - rotate to point right */
 .carousel button:last-of-type::before {
-    transform: translate(-60%, -50%) rotate(135deg);
+    transform: translate(-70%, -50%) rotate(135deg);
 }
 
 /* Hover effects */
