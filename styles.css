@@ -575,7 +575,15 @@ footer a:hover {
     height: 50px !important;
     margin: 0 20px !important;
     box-shadow: none !important;
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    margin: 0 !important;
+    left: 20px !important;
+    right: 20px !important;
 }
+
+
 
 /* Create chevron using border technique */
 .lightbox-prev::before,
