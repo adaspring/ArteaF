@@ -311,6 +311,21 @@ h2 a:hover, h3 a:hover {
     overflow: hidden;
     transition: transform 0.3s ease;
 }
+/* Create circular shadow background */
+.carousel button::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(26, 151, 51, 0.1);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(26, 151, 51, 0.3);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
 
 /* Create the chevron shape */
 .carousel button::before {
@@ -323,10 +338,8 @@ h2 a:hover, h3 a:hover {
     border-color: #1a9733; /* Green color */
     top: 50%;
     left: 50%;
-    box-shadow: 0 0 8px rgba(26, 151, 51, 0.3); /* Initial shadow */
-    transition: border-color 0.3s ease, 
-                transform 0.2s ease, 
-                box-shadow 0.3s ease; /* Add shadow transition */    
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 2px rgba(26, 151, 51, 0.5));    
 }
 
 /* Left arrow - rotate to point left */
@@ -339,29 +352,38 @@ h2 a:hover, h3 a:hover {
     transform: translate(-70%, -50%) rotate(135deg);
 }
 
-/* Hover effects */
+/* Hover states */
+.carousel button:hover::after {
+    background: rgba(26, 151, 51, 0.15);
+    box-shadow: 0 0 25px rgba(26, 151, 51, 0.4);
+}
+
 .carousel button:hover::before {
-    border-color: #27c347; /* Brighter green on hover */
-    box-shadow: 0 0 10px rgba(26, 151, 51, 0.4);
+    filter: drop-shadow(0 0 4px rgba(26, 151, 51, 0.7));
 }
 
-/* Click/active animation */
+
+/* Active/click states */
+.carousel button:active::after {
+    background: rgba(26, 151, 51, 0.2);
+    box-shadow: 0 0 30px rgba(26, 151, 51, 0.6);
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
 .carousel button:active::before {
-    transform-origin: center;
-    border-color: #0d6b21; /* Darker green when clicked */
-    box-shadow: 0 0 12px rgba(26, 151, 51, 0.6);
+    filter: drop-shadow(0 0 6px rgba(26, 151, 51, 0.9));
+    transform: translate(var(--tx, -50%), -50%) scale(0.95);
 }
 
-.carousel button:first-of-type:active::before {
-    transform: translate(-40%, -50%) rotate(-45deg) scale(0.9);
-    box-shadow: 0 0 12px rgba(26, 151, 51, 0.6);
+/* Arrow directions */
+.carousel button:first-of-type::before {
+    transform: translate(-30%, -50%) rotate(-45deg);
 }
 
-.carousel button:last-of-type:active::before {
-    transform: translate(-60%, -50%) rotate(135deg) scale(0.9);
-    box-shadow: 0 0 12px rgba(26, 151, 51, 0.6);
+.carousel button:last-of-type::before {
+    transform: translate(-70%, -50%) rotate(135deg);
 }
-
+```
 /* Make sure buttons are properly positioned */
 
 
