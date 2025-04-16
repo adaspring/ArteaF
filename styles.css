@@ -356,10 +356,7 @@ h2 a:hover, h3 a:hover {
 }
 
 /* Make sure buttons are properly positioned */
-.carousel {
-    position: relative;
-    padding: 0 50px; /* Space for the arrows */
-}
+
 
 /* Position the buttons */
 .carousel button:first-of-type {
