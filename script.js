@@ -248,7 +248,7 @@ function updateCarousel(id, direction) {
     const container = document.getElementById(`items-${id}`);
     const images = Array.from(container.querySelectorAll('img'));
     if (images.length === 0) return;
-    
+
     let currentIndex = parseInt(container.dataset.index || 0);
     images[currentIndex].classList.remove('active');
 
@@ -260,19 +260,31 @@ function updateCarousel(id, direction) {
         const indicators = Array.from(indicatorsContainer.querySelectorAll('.indicator'));
         if (indicators[currentIndex]) indicators[currentIndex].classList.remove('active');
     }
-    
+
     // Calculate new index
     currentIndex = direction === 'next' 
         ? (currentIndex + 1) % images.length 
         : (currentIndex - 1 + images.length) % images.length;
-    
+
     // Apply changes
     container.dataset.index = currentIndex;
     images[currentIndex].classList.add('active');
-    
+
     if (indicatorsContainer) {
         const indicators = Array.from(indicatorsContainer.querySelectorAll('.indicator'));
         if (indicators[currentIndex]) indicators[currentIndex].classList.add('active');
+    }
+
+    // Handle arrow button states
+    const leftArrow = carouselContainer.querySelector('.arrow-left');
+    const rightArrow = carouselContainer.querySelector('.arrow-right');
+    leftArrow.classList.remove('active');
+    rightArrow.classList.remove('active');
+
+    if (direction === 'next') {
+        rightArrow.classList.add('active');
+    } else {
+        leftArrow.classList.add('active');
     }
 }
 
