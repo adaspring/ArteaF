@@ -582,11 +582,11 @@ footer a:hover {
 }
 
 .lightbox-prev {
-    left: 20px !important;
+    left: 15px !important;
 }
 
 .lightbox-next {
-    right: 20px !important;
+    right: 15px !important;
     left: auto !important; /* Reset default positioning */
 }
 
