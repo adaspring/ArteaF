@@ -323,7 +323,10 @@ h2 a:hover, h3 a:hover {
     border-color: #1a9733; /* Green color */
     top: 50%;
     left: 50%;
-    transition: border-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 8px rgba(26, 151, 51, 0.3); /* Initial shadow */
+    transition: border-color 0.3s ease, 
+                transform 0.2s ease, 
+                box-shadow 0.3s ease; /* Add shadow transition */    
 }
 
 /* Left arrow - rotate to point left */
@@ -339,20 +342,24 @@ h2 a:hover, h3 a:hover {
 /* Hover effects */
 .carousel button:hover::before {
     border-color: #27c347; /* Brighter green on hover */
+    box-shadow: 0 0 10px rgba(26, 151, 51, 0.4);
 }
 
 /* Click/active animation */
 .carousel button:active::before {
     transform-origin: center;
     border-color: #0d6b21; /* Darker green when clicked */
+    box-shadow: 0 0 12px rgba(26, 151, 51, 0.6);
 }
 
 .carousel button:first-of-type:active::before {
     transform: translate(-40%, -50%) rotate(-45deg) scale(0.9);
+    box-shadow: 0 0 12px rgba(26, 151, 51, 0.6);
 }
 
 .carousel button:last-of-type:active::before {
     transform: translate(-60%, -50%) rotate(135deg) scale(0.9);
+    box-shadow: 0 0 12px rgba(26, 151, 51, 0.6);
 }
 
 /* Make sure buttons are properly positioned */
