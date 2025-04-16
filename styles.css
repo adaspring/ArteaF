@@ -323,7 +323,7 @@ h2 a:hover, h3 a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 12px rgba(26, 151, 51, 1.0);
+    box-shadow: 0 0 12px rgba(26, 151, 51, 0.5);
     transition: all 0.3s ease;
     z-index: -1;
 }
@@ -340,7 +340,7 @@ h2 a:hover, h3 a:hover {
     top: 50%;
     left: 50%;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 0 2px rgba(26, 151, 51, 0.5));    
+    filter: drop-shadow(0 0 2px rgba(26, 151, 51, 1.0));    
 }
 
 /* Left arrow - rotate to point left */
