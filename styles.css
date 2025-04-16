@@ -355,13 +355,13 @@ h2 a:hover, h3 a:hover {
 
 /* Hover states */
 .carousel button:hover::after {
-    background: rgba(26, 151, 51, 0.15);
-    box-shadow: 0 0 15px rgba(26, 151, 51, 0.2);
-    transform: translate(-50%, -50%) scale(1.05);
+    filter: drop-shadow(0 0 4px rgba(26, 151, 51, 0.7));
 }
 
 .carousel button:hover::before {
-    filter: drop-shadow(0 0 4px rgba(26, 151, 51, 0.7));
+    background: rgba(26, 151, 51, 0.15);
+    box-shadow: 0 0 15px rgba(26, 151, 51, 0.2);
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 
