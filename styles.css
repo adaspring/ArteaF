@@ -355,6 +355,7 @@ h2 a:hover, h3 a:hover {
 
 /* Hover states */
 .carousel button:hover::after {
+    background: rgba(26, 151, 51, 0.15);
     box-shadow: 0 0 15px rgba(26, 151, 51, 0.2);
     transform: translate(-50%, -50%) scale(1.05);
 }
@@ -368,6 +369,7 @@ h2 a:hover, h3 a:hover {
 .carousel button:active::after {
     box-shadow: 0 0 18px rgba(26, 151, 51, 0.25);
     transform: translate(-50%, -50%) scale(0.95);
+    background: rgba(26, 151, 51, 0.2);
 }
 
 .carousel button:active::before {
