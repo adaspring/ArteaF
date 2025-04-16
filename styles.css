@@ -582,11 +582,11 @@ footer a:hover {
 }
 
 .lightbox-prev {
-    left: 15px !important;
+    left: 20px !important;
 }
 
 .lightbox-next {
-    right: 15px !important;
+    right: 20px !important;
     left: auto !important; /* Reset default positioning */
 }
 
@@ -601,7 +601,7 @@ footer a:hover {
     height: 30px;
     border-style: solid;
     border-width: 6px 0 0 6px;
-    border-color: #1a9733;
+    border-color: #fff;
     top: 50%;
     left: 50%;
     transition: border-color 0.3s ease;
@@ -620,13 +620,13 @@ footer a:hover {
 /* Hover states */
 .lightbox-prev:hover::before,
 .lightbox-next:hover::before {
-    border-color: #27c347;
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Active states */
 .lightbox-prev:active::before,
 .lightbox-next:active::before {
-    border-color: #0d6b21;
+    border-color: #ccc;
     transform: 
         translate(var(--tx, -40%), -50%) 
         rotate(var(--rot, -45deg)) 
