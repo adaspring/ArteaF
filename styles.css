@@ -367,14 +367,15 @@ h2 a:hover, h3 a:hover {
 
 /* Active/click states */
 .carousel button:active::after {
-    box-shadow: 0 0 18px rgba(26, 151, 51, 0.25);
-    transform: translate(-50%, -50%) scale(0.95);
-    background: rgba(26, 151, 51, 0.2);
+    filter: drop-shadow(0 0 6px rgba(26, 151, 51, 0.9));
+    transform: translate(var(--tx, -50%), -50%) scale(0.95);
 }
 
 .carousel button:active::before {
-    filter: drop-shadow(0 0 6px rgba(26, 151, 51, 0.9));
-    transform: translate(var(--tx, -50%), -50%) scale(0.95);
+    box-shadow: 0 0 18px rgba(26, 151, 51, 0.25);
+    transform: translate(-50%, -50%) scale(0.95);
+    background: rgba(26, 151, 51, 0.2);
+
 }
 
 /* Arrow directions */
