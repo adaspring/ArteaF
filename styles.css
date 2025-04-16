@@ -606,7 +606,8 @@ footer a:hover {
     border-color: #fff;
     top: 50%;
     left: 50%;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
 }
 
 /* Left arrow */
@@ -623,6 +624,7 @@ footer a:hover {
 .lightbox-prev:hover::before,
 .lightbox-next:hover::before {
     border-color: rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.6));
 }
 
 /* Active states */
@@ -633,6 +635,7 @@ footer a:hover {
         translate(var(--tx, -40%), -50%) 
         rotate(var(--rot, -45deg)) 
         scale(0.9);
+    filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.4));
 }
 
 .lightbox-next:active::before {
