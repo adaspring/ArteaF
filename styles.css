@@ -308,7 +308,7 @@ h2 a:hover, h3 a:hover {
     position: relative;
     z-index: 5;
     color: transparent; /* Hide the original text but keep it for screen readers */
-    overflow: hidden;
+    overflow: visible;
     transition: transform 0.3s ease;
 }
 /* Create circular shadow background */
