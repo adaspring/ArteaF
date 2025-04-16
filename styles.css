@@ -298,16 +298,16 @@ h2 a:hover, h3 a:hover {
     z-index: 2;
 }
 
-/* Chevron Arrow Styling for Carousel */
+/* Accessible Chevron Arrow Styling for Carousel */
 .carousel button {
-    background: transparent; /* Remove background */
+    background: transparent;
     border: none;
     width: 50px;
     height: 50px;
     cursor: pointer;
     position: relative;
     z-index: 5;
-    color: transparent; /* Hide the original text but keep it for screen readers */
+    font-size: 0; /* Hide text visually but keep for screen readers */
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -316,10 +316,10 @@ h2 a:hover, h3 a:hover {
 .carousel button::before {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     border-style: solid;
-    border-width: 6px 0 0 6px; /* Only top and left borders to create an angle */
+    border-width: 6px 0 0 6px; /* Only top and left borders to create angle */
     border-color: #1a9733; /* Green color */
     top: 50%;
     left: 50%;
@@ -355,16 +355,10 @@ h2 a:hover, h3 a:hover {
     transform: translate(-60%, -50%) rotate(135deg) scale(0.9);
 }
 
-/* Make sure buttons are properly positioned */
-
-
-/* Position the buttons */
-.carousel button:first-of-type {
-    left: 5px;
-}
-
-.carousel button:last-of-type {
-    right: 5px;
+/* Focus accessibility styles */
+.carousel button:focus {
+    outline: 2px solid #27c347;
+    outline-offset: 2px;
 }
 
 .carousel-indicators {
