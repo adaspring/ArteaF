@@ -343,16 +343,6 @@ h2 a:hover, h3 a:hover {
     filter: drop-shadow(0 0 2px rgba(26, 151, 51, 0.3));    
 }
 
-/* Left arrow - rotate to point left */
-.carousel button:first-of-type::before {
-    transform: translate(-30%, -50%) rotate(-45deg);
-}
-
-/* Right arrow - rotate to point right */
-.carousel button:last-of-type::before {
-    transform: translate(-70%, -50%) rotate(135deg);
-}
-
 /* Hover states */
 .carousel button:hover::after {
     box-shadow: 0 0 15px rgba(26, 151, 51, 0.2);
@@ -362,7 +352,6 @@ h2 a:hover, h3 a:hover {
 .carousel button:hover::before {
     filter: drop-shadow(0 0 4px rgba(26, 151, 51, 0.7));
 }
-
 
 /* Active/click states */
 .carousel button:active::after {
@@ -376,16 +365,30 @@ h2 a:hover, h3 a:hover {
     transform: translate(var(--tx, -50%), -50%) scale(0.95);
 }
 
-/* Arrow directions */
-.carousel button:first-of-type::before {
-    transform: translate(-35%, -50%) rotate(-45deg);
+/* Previous (left) arrow specific styles */
+.carousel button:first-of-type:active::after {
+    background: rgba(26, 151, 51, 0.2) !important;
+    box-shadow: 0 0 18px rgba(26, 151, 51, 0.25) !important;
+    transform: translate(-50%, -50%) scale(0.95) !important;
 }
 
-.carousel button:last-of-type::before {
-    transform: translate(-65%, -50%) rotate(135deg);
+.carousel button:first-of-type:active::before {
+    filter: drop-shadow(0 0 3px rgba(26, 151, 51, 0.4)) !important;
+    transform: translate(-35%, -50%) rotate(-45deg) scale(0.95) !important;
 }
-```
-/* Make sure buttons are properly positioned */
+
+/* Next (right) arrow specific styles */
+.carousel button:last-of-type:active::after {
+    background: rgba(26, 151, 51, 0.2) !important;
+    box-shadow: 0 0 18px rgba(26, 151, 51, 0.25) !important;
+    transform: translate(-50%, -50%) scale(0.95) !important;
+}
+
+.carousel button:last-of-type:active::before {
+    filter: drop-shadow(0 0 3px rgba(26, 151, 51, 0.4)) !important;
+    transform: translate(-65%, -50%) rotate(135deg) scale(0.95) !important;
+}
+
 
 
 /* Position the buttons */
