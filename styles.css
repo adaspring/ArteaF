@@ -594,12 +594,12 @@ footer a:hover {
 
 /* Left arrow */
 .lightbox-prev::before {
-    transform: translate(-40%, -50%) rotate(-45deg);
+    transform: translate(-30%, -50%) rotate(-45deg);
 }
 
 /* Right arrow */
 .lightbox-next::before {
-    transform: translate(-60%, -50%) rotate(135deg);
+    transform: translate(-70%, -50%) rotate(135deg);
 }
 
 /* Hover states */
