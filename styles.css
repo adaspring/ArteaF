@@ -300,7 +300,7 @@ h2 a:hover, h3 a:hover {
 
 .carousel-images:not(.loaded) {
     background: linear-gradient(45deg, #ccc 25%, #0d2a1c 50%, #1a4731 75%);
-    background-size: 400% 400%;
+    background-size: none !important;
     animation: loading-gradient 2s ease infinite;
 }
 
