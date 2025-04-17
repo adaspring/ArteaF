@@ -299,9 +299,7 @@ h2 a:hover, h3 a:hover {
 }
 
 .carousel-images img[alt*="Certificate"] {
-    object-fit: scale-down;
-    background: rgba(255,255,255,0.1);
-    padding: 10px;
+    object-fit: scale-up;
 }
 
 /* Chevron Arrow Styling for Carousel */
