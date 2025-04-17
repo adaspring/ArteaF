@@ -298,6 +298,12 @@ h2 a:hover, h3 a:hover {
     z-index: 2;
 }
 
+.carousel-images img[alt*="Certificate"] {
+    object-fit: scale-down;
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+}
+
 /* Chevron Arrow Styling for Carousel */
 .carousel button {
     background: transparent; /* Remove background */
