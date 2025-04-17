@@ -298,6 +298,13 @@ h2 a:hover, h3 a:hover {
     z-index: 2;
 }
 
+.carousel-images:not(.loaded) {
+    background: linear-gradient(45deg, #1a4731 25%, #0d2a1c 50%, #1a4731 75%);
+    background-size: 400% 400%;
+    animation: loading-gradient 2s ease infinite;
+}
+
+
 /* Chevron Arrow Styling for Carousel */
 .carousel button {
     background: transparent; /* Remove background */
