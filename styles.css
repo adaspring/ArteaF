@@ -284,7 +284,7 @@ h2 a:hover, h3 a:hover {
     position: absolute;
     max-width: 85%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     opacity: 0;
