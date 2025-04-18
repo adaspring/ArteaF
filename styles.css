@@ -776,9 +776,9 @@ footer a:hover {
 
 @media (min-width: 769px) {
     .carousel button:first-of-type {
-        left: 80px;
+        left: 280px;
     }
     .carousel button:last-of-type {
-        right: 80px;
+        right: 280px;
     }
 }
