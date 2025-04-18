@@ -278,6 +278,7 @@ h2 a:hover, h3 a:hover {
     width: 100%;
     height: 400px;
     overflow: hidden;
+    box-sizing: border-box; 
 }
 
 .carousel-images img {
