@@ -266,7 +266,7 @@ h2 a:hover, h3 a:hover {
 .carousel {
     display: flex;
     align-items: center;
-    justify-content: center;
+    
     gap: 15px;
     position: relative;
     height: auto;
