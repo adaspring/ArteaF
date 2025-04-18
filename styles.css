@@ -291,7 +291,6 @@ h2 a:hover, h3 a:hover {
     transition: opacity 0.5s ease;
     left: 50%;
     transform: translateX(-50%);
-    box-sizing: border-box;
 }
 
 .carousel-images img.active {
