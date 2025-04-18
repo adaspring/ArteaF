@@ -279,6 +279,9 @@ h2 a:hover, h3 a:hover {
     height: 500px;
     overflow: hidden;
     border: 2px solid #ffd700 !important;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 .carousel-images img {
