@@ -410,6 +410,81 @@ h2 a:hover, h3 a:hover {
     margin-top: 15px;
 }
 
+/* ================================================== */
+/* Warm Orange Carousel Theme */
+/* ================================================== */
+.carousel-container.warm-terracotta-theme {
+    background: linear-gradient(45deg, #8b4513 0%, #d2691e 30%, #cd853f 100%);
+    border: 2px solid #a0522d !important;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container.warm-terracotta-theme::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('INSERT_YOUR_CLOUDINARY_TEXTURE_URL_HERE');
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.warm-terracotta-theme .carousel-images {
+    border: 2px solid #d2b48c !important;
+    box-shadow: inset 0 0 20px rgba(210, 180, 140, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.warm-terracotta-theme .carousel-images img {
+    border: 2px solid #8b4513 !important;
+    box-shadow: 0 0 15px rgba(139, 69, 19, 0.4);
+}
+
+/* Arrow Styling */
+.warm-terracotta-theme .carousel button::after {
+    background: rgba(210, 105, 30, 0.15) !important;
+    box-shadow: 0 0 12px rgba(210, 105, 30, 0.4) !important;
+}
+
+.warm-terracotta-theme .carousel button::before {
+    border-color: #d2691e !important;
+    filter: drop-shadow(0 0 2px rgba(210, 105, 30, 0.8)) !important;
+}
+
+/* Hover States */
+.warm-terracotta-theme .carousel button:hover::after {
+    background: rgba(210, 105, 30, 0.25) !important;
+    box-shadow: 0 0 15px rgba(210, 105, 30, 0.5) !important;
+}
+
+.warm-terracotta-theme .carousel button:hover::before {
+    filter: drop-shadow(0 0 4px rgba(210, 105, 30, 0.9)) !important;
+}
+
+/* Active States */
+.warm-terracotta-theme .carousel button:active::after {
+    background: rgba(210, 105, 30, 0.3) !important;
+    box-shadow: 0 0 18px rgba(210, 105, 30, 0.6) !important;
+}
+
+/* Indicators */
+.warm-terracotta-theme .indicator {
+    background-color: rgba(210, 180, 140, 0.4);
+}
+
+.warm-terracotta-theme .indicator.active,
+.warm-terracotta-theme .indicator:hover {
+    background-color: #d2b48c;
+}
+
+
+
 .indicator {
     width: 10px;
     height: 10px;
